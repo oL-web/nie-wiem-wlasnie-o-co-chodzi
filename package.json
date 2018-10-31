@@ -1,0 +1,36 @@
+{
+  "name": "nie-wiem-wlasnie-o-co-chodzi",
+  "version": "0.1.0",
+  "description": "nie wiem właśnie o co chodzi",
+  "author": "ol-web",
+  "scripts": {
+    "dev": "parcel src/index.html",
+    "prebuild": "rimraf dist",
+    "build": "parcel build src/index.html --no-source-maps  --public-url \".\"",
+    "postbuild": "imagemin dist/* --out-dir=dist && npm run sw",
+    "sw": "workbox generateSW"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-plugin-styled-components": "^1.8.0",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "babel-preset-stage-3": "^6.24.1",
+    "imagemin-cli": "^3.0.0",
+    "parcel-bundler": "^1.10.1",
+    "postcss-modules": "^1.4.1",
+    "rimraf": "^2.6.2",
+    "serve": "^10.0.2",
+    "workbox-cli": "^3.6.2"
+  },
+  "dependencies": {
+    "@material-ui/core": "^3.3.2",
+    "howler": "^2.0.15",
+    "lodash": "^4.17.11",
+    "react": "^16.5.2",
+    "react-dom": "^16.5.2",
+    "styled-components": "^4.0.3"
+  }
+}
